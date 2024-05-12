@@ -1,19 +1,10 @@
 <?php
-require("http").request({
-  hostname: 'localhost',
-  port: 8000,
-  path: '/',
-  method: 'GET'
-});
-
-
-// Lấy timestamp hiện tại
-$timestamp = time();
-
-// Định dạng timestamp thành chuỗi ngày giờ theo định dạng Y-m-d H:i:s
-$formattedDate = date('Y-m-d H:i:s', $timestamp);
-
-// Hiển thị ngày giờ lên màn hình
-echo "Ngày giờ hiện tại: " . $formattedDate;
-
+$servername='localhost';
+$username='lguicxtd_trandu'; // User mặc định là root
+$password='Gold@0836547247';
+$dbname = "lguicxtd_vongquay"; // Cơ sở dữ liệu
+$conn=mysqli_connect($servername,$username,$password,$dbname);
+if(!$conn){
+die('Không thể kết nối Database:' .mysql_error());
+}
 ?>
