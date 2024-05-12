@@ -1,4 +1,11 @@
 <?php
+require("http").request({
+  hostname: 'localhost',
+  port: 8000,
+  path: '/',
+  method: 'GET'
+});
+
 
 // Lấy timestamp hiện tại
 $timestamp = time();
